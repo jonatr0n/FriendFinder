@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <title>Pokemon Finder - Survey</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Chosen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
@@ -25,9 +23,10 @@
         <h4>Link to Photo Image (Required)</h4>
         <input type="text" name="" id="photo" class="form-control" required>
         <hr>
+        
         <!-- Questions -->
         <h3><strong>Question 1</strong></h3>
-        <h4>You approach challenges head on</h4>
+        <h4>DO YOU WANNA BE THE VERY BEST</h4>
         <select data-placeholder="" class="chosen-select" id="q1">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -37,7 +36,7 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h3><strong>Question 2</strong></h3>
-        <h4>Generally speaking, you prepare for just in case situations.</h4>
+        <h4>...LIKE NO ONE EVER WAS?</h4>
         <select data-placeholder="" class="chosen-select" id="q2">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -47,7 +46,7 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h3><strong>Question 3</strong></h3>
-        <h4>You find it easy to stay keep a calm head when things go wrong</h4>
+        <h4>YOU WANNA CATCH THEM ALL?</h4>
         <select data-placeholder="" class="chosen-select" id="q3">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -97,7 +96,7 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h3><strong>Question 8</strong></h3>
-        <h4>You wanna be the very best.</h4>
+        <h4>You like to battle everyone you meet.</h4>
         <select data-placeholder="" class="chosen-select" id="q8">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -148,7 +147,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">WooHoo! Here is your best match.</h4>
+                    <h4 class="modal-title">Congratulations on your new pokemon!</h4>
                 </div>
                 <div class="modal-body">
                     <h2 id="matchName"></h2>
@@ -171,6 +170,7 @@
                 for (var i = 1; i <= 10; i++) {
                     userScore.push($("#q" + i).val().trim());
                 }
+                //I just want the name, photo and scores
                 person = {
                     name: $("#name").val().trim(),
                     image: $("#photo").val().trim(),
@@ -193,7 +193,8 @@
                 $("#photo").val(" ");
                 $(".chosen-select").val(" ");
             }
-        }); //end of doc.ready
+        });
+        //end of doc.ready
     </script>
 </body>
 
